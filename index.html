@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="fi">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Savannin Eläimet</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		
+
+        <!-- slideri css -->
+        <link rel="stylesheet" href="css/jquery.bxslider.css">
+
+
+
+        <style>
+        body {position:relative;}
+        .container {background-color: LightCyan; padding:10px 0px;}
+        .galleria img {height:250px; width: 250px;
+                           box-shadow: 8px 8px 8px grey;
+                           margin:10px;}
+        .haitari {width: 100%;}
+        .haitari img {width: 100%;}
+        .haitari a { color: DarkOrange;}
+        .card-header {background-color: MidnightBlue;}
+        .card-body { background-color: LightCyan;}
+        
+        .nav-link.active {
+	     color: white !important;
+	        }  
+        .navbar-custom {
+        background-color: MidnightBlue;
+        opacity: 0.9;
+        }
+
+        .navbar-custom .navbar-brand,
+         .navbar-custom .navbar-text{
+        padding-left: 5px;
+        color: DarkOrange;
+        }
+
+        .navbar-custom .navbar-nav .nav-link {
+        color: DarkOrange;
+           }
+        .nav-item .dropdown-menu a:hover {
+            color: white !important;
+            background: gray !important;
+            cursor: pointer;
+            }
+
+        .navbar-custom .nav-item.active .nav-link,
+        .navbar-custom .nav-item:hover .nav-link {
+          color: #ffffff;
+        }
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+            }
+        .custom-toggler {padding-left: 5px;}
+
+        #slider, #accordion, #galleria, #palaute { padding-top:50px; }        
+
+        fieldset { border: 1px dotted black; width: 100%; padding: 5px 5px;  }
+        h2 { color: DarkOrange; }
+        
+        </style>
+
+        <!-- Jquery -->
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="js/grt-responsive-menu.js"></script>
+        <!-- popper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	</head>
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+		<div class="container" id="alku">
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top container">
+	<a class="navbar-brand" href="#alku">Savannin eläimet</a>
+
+<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class="navbar-toggler-icon"></span>
+  	</button>
+
+  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    	<ul class="navbar-nav mr-auto">
+      	<li class="nav-item">
+<a class="nav-link" href="#slider">Etusivu</a>
+      	</li>
+
+      	<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Yleistietoa
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#accordion">Eläimet</a>
+          <a class="dropdown-item" href="#accordion">Sijainti</a>         
+          <a class="dropdown-item" href="#accordion">Ilmasto</a>
+        </div>
+      </li>
+            
+       <li class="nav-item">
+        <a class="nav-link" href="#galleria">Kuvagalleria</a>
+      </li>
+            
+               
+      <li class="nav-item">
+        <a class="nav-link" href="#otayhteytta">Ota yhteyttä</a>
+      </li>
+    </ul>
+    
+     </div>
+     </nav>
+
+
+            <div class="slider" id="slider">
+            <div><img src="images/slide1.jpg" alt="slide1"></div>
+            <div><img src="images/slide2.jpg" alt="slide2"></div>
+            <div><img src="images/slide3.jpg" alt="slide3"></div>
+            <div><img src="images/slide4.jpg" alt="slide4"></div>
+            <div><img src="images/slide5.jpg" alt="slide5"></div>
+            <div><img src="images/slide6.jpg" alt="slide6"></div>
+            </div>
+
+            
+
+
+<div class="haitari" id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+          Eläimet
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse show" data-parent="#accordion">
+        <div class="card-body">
+        <img src="images/elephants.jpg" alt="Savannieläin">
+         <p>Savanneilla asuu suuri valikoima eläimiä. Afrikan savanneilla asuu esimerkiksi norsuja, kirahveja, antilooppeja, hyeenoita, ja viidakon kuninkaita, eli leijonia</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+        Sijainti
+      </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+            <img src="images/masai.jpg" alt="Sijainti">
+          <p>Etenkin Afrikka tunnetaan savanneista, mutta savanneja esiintyy myös Intiassa, Australiassa ja Keski-Amerikassa</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+          Ilmasto
+        </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <img src="images/tree.jpg" alt="Savannin ilmasto">
+        <p>Savanni-ilmastossa vaihtelee kuiva- ja sadekaudet. Kuiva kausi voi kestää yli puoli vuottakin, joten alueen eläimistön ja kasvillisuuden täytyy sopeutua siihen.</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div class="galleria" id="galleria"></div>
+       
+
+<div class="container" id="palaute">
+<div class="row">
+<div class="col-sm-6" id="otayhteytta">
+<fieldset>
+<form id="lomake" class="lomake" onsubmit="return false">
+  <h2 id="otsikko">Palautelomake</h2>
+  <label>Nimi:<br>
+  <input type="text" name="nimi" id="nimi" placeholder="Nimi" required>
+  </label>
+  <label>Sähköposti:<br>
+  <input type="email" name="email" id="email" placeholder="Sähköposti" required></label><br>
+  Mielipide sivustosta:<br>
+  <input type="radio" name="arvostelu" id="arv" value="Pidin"> <label for="arv">Pidin</label>
+  <input type="radio" name="arvostelu" id="arv1" value="Pidin osittain"> <label for="arv1">Pidin osittain</label>
+<input type="radio" name="arvostelu" id="arv2" value="En pitänyt"> <label for="arv2">En pitänyt</label><br> 
+
+  Sivun parhaat osiot:<br>
+    <input type="checkbox" name="osio" id="osio1" value="Slideshow"><label for="osio1">Slideshow</label>
+    <input type="checkbox" name="osio" id="osio2" value="Haitari"><label for="osio2">Haitari</label>
+    <input type="checkbox" name="osio" id="osio3" value="Kuvagalleria"><label for="osio3">Kuvagalleria</label><br>
+
+    Valitse savannin paras eläin:<br>
+<select id="paraselain">
+  <option value="kirahvi">Kirahvi</option>
+  <option value="leijona">Leijona</option>
+  <option value="norsu">Norsu</option>
+  <option value="seepra">Seepra</option>
+  <option value="sarvikuono">Sarvikuono</option>
+  <option value="muu">Muu</option>
+</select><br>
+<label for="vapaa">Sana vapaa:</label><br>
+         <textarea placeholder="Kerro mielipiteesi sivusta" id="vapaa"></textarea>
+      <br>
+  <input type="submit" name="laheta" value="Lähetä" onclick="lah()">
+  <input type="reset" value="Tyhjennä">
+
+</form>
+</fieldset>
+</div>
+
+<div style="border: 1px dotted black;width:48%;padding: 5px 5px;">
+<h2>Saadut palautteet</h2>
+<div id="palautteet"></div>
+</div>        
+    </div>
+</div>
+
+<div class="container">
+            <footer style="text-align:center">
+<p>Sivun yhteystiedot<br>
+Osoite: Aataminkatu 1 A, 00001, Aataminkaupunki. <br>
+Sähköposti: <a href="mailto:savanni@sivu.com">savanni@sivu.com</a> <br>
+Puh. +123 456 789</p></footer>
+</div>
+        </div>
+
+
+       <script>
+(function() {
+  var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+  $.getJSON( flickerAPI, {
+    tags: "savanna,animal",
+    tagmode: "all",
+    format: "json"
+  })
+    .done(function( data ) {
+      $.each( data.items, function( i, item ) {
+        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#galleria" );
+        if ( i === 11 ) {
+          return false;
+        }
+      });
+    });
+})();
+</script>
+
+        
+        <!-- slideri -->        
+        <script src="js/jquery.bxslider.js"></script>
+        <script>
+        $(document).ready(function(){
+        $('#slider').bxSlider();
+        });
+        </script>
+
+        <!-- lightboxi -->
+        <script src="js/lightbox.min.js"></script>
+		
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+        
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyATwnNV0F-8BDnSbpXneP8PD59Sa_7JZ-o",
+    authDomain: "fir-test-b302c.firebaseapp.com",
+    databaseURL: "https://fir-test-b302c.firebaseio.com",
+    projectId: "fir-test-b302c",
+    storageBucket: "fir-test-b302c.appspot.com",
+    messagingSenderId: "579046870285",
+    appId: "1:579046870285:web:4e3c1621257820cf2a3444"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+       
+        <script>
+    function lah(){
+    // tekstin tallennus
+    var firebaseRef = firebase.database().ref();
+    var vapaa = document.getElementById("vapaa").value;
+    var lahettaja = document.getElementById("nimi").value;
+    var email = document.getElementById("email").value;
+    var paras = document.getElementById("paraselain").value;
+
+    var radios = document.getElementsByName("arvostelu");
+    var checkboxes = document.getElementsByName("osio");
+    var checkedradio = "";
+            
+    var taulukko = [];
+
+    for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
+                    checkedradio = radios[i].value;
+
+                break;
+                    }
+                } 
+            
+    for (var k = 0, len = checkboxes.length; k < len; k++) {
+            if (checkboxes[k].checked) {
+                    taulukko.push(checkboxes[k].value);
+                    }
+                } 
+
+    firebaseRef.child("palautteet").push().set({
+        nimi: lahettaja,
+        sahkoposti: email,
+        vapaasana: vapaa,
+        arvostelu: checkedradio,
+        osiot: taulukko.join(),
+        elain: paras
+           
+    })
+
+    }
+</script>
+<script>
+    //viestien luku
+    var rootRef = firebase.database().ref().child('palautteet');
+    
+    rootRef.on('child_added', snap =>
+               { var nimi = snap.child("nimi").val();
+                 var elain = snap.child("elain").val();
+                 var email = snap.child("sahkoposti").val();
+                 var arvostelu = snap.child("arvostelu").val();
+                var osiot = snap.child("osiot").val();
+                 var vapaa = snap.child("vapaasana").val();
+                $("#palautteet").append("<p>" + nimi + ": " + email + ": " + arvostelu +": " +osiot + ": " + elain + ": " +vapaa + "</p>");
+                
+               });
+</script>
+	</body>
+</html>
